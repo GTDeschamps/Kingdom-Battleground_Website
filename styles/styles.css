@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Général */
+body {
+    margin: 0;
+    font-family: Garamond;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    min-height: 100vh;
+    background-color: #4E3B31;
+    /* bois sombre pour le fond */
+    color: #EAD8A6;
+}
+
+a {
+    text-decoration: none;
+    color: #EAD8A6;
+    /* Texte Parchment Beige */
+}
+
+
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user img {
+    height: 50px;
+}
+
+
+
+/*nav-link*/
+.nav-link {
+    text-decoration: none;
+    color: #EAD8A6;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #C4A000;
+    color: #4E3B31;
+}
+
+.main-content > * {
+    flex:1;
+    margin-top: 500px; /* taille entre chaque section */
+    padding-top: 20px; /* Ajout de padding pour éviter le collapse */
+    overflow: hidden; /* Pour forcer l'application des marges */
+}
+
+/* Section des images */
+.image-section {
+    display: flex;
+    justify-content: center; /* Espacement entre les images */
+    align-items: center;
+    margin: 0 auto;
+    max-width: 90%; /* Limite la largeur totale de la section */
+}
+
+.game-image {
+    width: 48%; /* Chaque image prend environ la moitié de l'espace */
+    border: 5px solid #C4A000; /* Bordure dorée */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+}
+
+/* Section des colonnes de texte */
+.text-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 40px auto;
+    max-width: 90%; /* Limite la largeur totale de la section */
+    gap: 20px; /* Espacement entre les colonnes */
+}
+
+.text-column {
+    background-color: #EAD8A6; /* Fond beige */
+    color: #2C3E50; /* Texte bleu foncé */
+    border: 3px solid #C4A000; /* Bordure dorée */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+}
+.separator {
+    border: none; /* Supprime les bordures standards */
+    height: 3px; /* Épaisseur du liseré */
+    background-color: #C4A000; /* Couleur dorée */
+    margin: 10px 0; /* Espacement au-dessus et en dessous */
+}
+
+.small-column {
+    flex: 1; /* Les colonnes extérieures prennent 1 unité d'espace chacune */
+}
+
+.large-column {
+    background-color: #5A5A5A; /* Même couleur que le footer */
+    color: #EAD8A6; /* Texte clair pour contraste */
+    flex: 2; /* La colonne centrale prend 2 unités d'espace */
+    text-align: center; /* Centrer le contenu textuel */
+}
+
+/* Pour rendre les sections adaptables sur mobile */
+@media (max-width: 768px) {
+    .image-section {
+        flex-direction: lign; /* Images empilées verticalement */
+        align-items: center;
+    }
+
+    .game-image {
+        width: 50%; /* Les images occupent la moitié de la page */
+        margin-bottom: 20px;
+    }
+
+    .text-section {
+        flex-direction: column; /* Colonnes empilées verticalement */
+    }
+
+    .text-column {
+        width: 100%; /* Chaque colonne occupe toute la largeur */
+        margin-bottom: 20px;
+    }
+}
+
+/* Conteneur du bouton : centre le bouton sous la seconde colonne */
+.hexagon-button-container {
+    align-items: center;
+    margin-top: 20px; /* Espacement entre la colonne centrale et le bouton */
+}
+/* Conteneur du bouton */
+.hexagon-button {
+    text-align: center;
+    width: 200px; /* Largeur du bouton */
+    height: 100px;
+    background-color: #355E3b; /* Couleur de fond, identique au header */
+    border: 3px solid #C4A000; /* Liseré doré */
+    border-radius: 10px; /* Coins arrondis pour le liseré */
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animation hover */
+}
+
+/* Texte à l'intérieur du bouton */
+.hexagon-button a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #C4A000; /* Texte doré */
+    text-align: center;
+    display: block;
+    width: 100%; /* S'étend sur tout le bouton */
+    height: 100%; /* Prend tout l'espace */
+    line-height: 86.6px; /* Centrer verticalement (basé sur la hauteur du bouton) */
+}
+
+/* Ajout d'un effet hover */
+.hexagon-button:hover {
+    background-color: #C4A000; /* Fond doré */
+}
+
+.hexagon-button:hover a {
+    color: #4E3B31; /* Texte prend la couleur du fond original */
+}
+
+
+
