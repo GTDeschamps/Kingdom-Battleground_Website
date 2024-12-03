@@ -189,5 +189,7 @@
     /* Ombre vers le haut */
     border-top: 2px solid #C4A000;
     /* Bordure dorée en haut */
+    z-index: 1000;
+    /* Toujours visible au-dessus des autres éléments */
 }
 

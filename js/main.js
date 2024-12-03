@@ -1,7 +1,7 @@
 // Charge le header et le footer
 document.addEventListener("DOMContentLoaded", function () {
     // Charger le Header
-    fetch('/Kingdom-Battleground_Website/partials/header.html')
+    fetch('partials/header.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Header non trouvé');
@@ -13,17 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error('Erreur chargement header:', error));
 
-    // faire apparaitre la box :"login"
-const userButton = document.getElementById('userButton');
-const loginBox = document.getElementById('loginBox');
-
-userButton.addEventListener('click', () => {
-    const isBoxVisible = loginBox.style.display === 'block';
-    loginBox.style.display = isBoxVisible ? 'none' : 'block';
-});
 
     // Charger le Footer
-    fetch('/Kingdom-Battleground_Website/partials/footer.html')
+    fetch('partials/footer.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Footer non trouvé');
@@ -34,4 +26,13 @@ userButton.addEventListener('click', () => {
             document.getElementById('footer-placeholder').innerHTML = data;
         })
         .catch(error => console.error('Erreur chargement footer:', error));
+});
+
+// faire apparaitre la box :"login"
+const userButton = document.getElementById('userButton');
+const loginBox = document.getElementById('loginBox');
+
+userButton.addEventListener('click', () => {
+    const isBoxVisible = loginBox.style.display === 'block';
+    loginBox.style.display = isBoxVisible ? 'none' : 'block';
 });
