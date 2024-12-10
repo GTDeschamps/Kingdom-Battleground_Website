@@ -64,6 +64,7 @@ header, footer {
     text-align: center;
 }
 
+
 /* Page Title */
 .page-title {
     text-align: center;
@@ -206,4 +207,102 @@ header, footer {
 .article-row span {
     flex: 1;
     text-align: center;
+}
+
+/* Responsive Design */
+/* For screens 1024px and smaller */
+@media (max-width: 1024px) {
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav a {
+        font-size: 20px;
+    }
+
+    .user img {
+        height: 40px;
+    }
+
+    .forum-topics {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .topics-container {
+        gap: 8px;
+    }
+
+    .forum-articles {
+        max-width: 90%;
+    }
+
+    .sorting-filters {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pagination button,
+    .page-numbers .page-number {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+    }
+}
+
+/* For screens 768px and smaller */
+@media (max-width: 768px) {
+    body {
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+
+    header, footer {
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav a {
+        font-size: 18px;
+    }
+
+    .forum-topics {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .topics-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .forum-articles {
+        max-width: 95%;
+    }
+
+    .pagination button,
+    .page-numbers .page-number {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+
+    .article-row {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .sorting-filters select,
+    .sorting-filters input {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
 }

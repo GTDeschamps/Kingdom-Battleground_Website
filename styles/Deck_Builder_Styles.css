@@ -156,3 +156,86 @@ h1 {
     background-color: #2C3E50;
     color: #EAD8A6;
 }
+
+/* Responsive Design */
+/* For screens 1024px and smaller */
+@media (max-width: 1024px) {
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav a {
+        font-size: 20px;
+    }
+
+    .user img {
+        height: 40px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-table {
+        max-height: 400px;
+    }
+
+    .deck-header {
+        font-size: 20px;
+    }
+
+    .save-deck {
+        font-size: 14px;
+    }
+}
+
+/* For screens 768px and smaller */
+@media (max-width: 768px) {
+    header, footer {
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav a {
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .card-table {
+        flex: 1;
+        max-height: 300px;
+    }
+
+    .deck-header {
+        font-size: 18px;
+    }
+
+    .deck-builder {
+        border-width: 2px;
+    }
+
+    .deck-card {
+        margin: 5px 10px;
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+
+    .save-deck {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}

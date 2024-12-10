@@ -36,3 +36,13 @@ userButton.addEventListener('click', () => {
     const isBoxVisible = loginBox.style.display === 'block';
     loginBox.style.display = isBoxVisible ? 'none' : 'block';
 });
+
+//menu déroulant pour mobile
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+// Affichage ou masquage des liens
+navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+

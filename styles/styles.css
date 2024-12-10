@@ -33,6 +33,7 @@ a:hover {
 .nav {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .nav a {
@@ -70,7 +71,8 @@ a:hover {
 
 .main-content > {
     display: flex;
-    margin-top: 500px; /* taille entre chaque section */
+    flex-wrap: wrap;
+    margin-top: 50px; /* taille entre chaque section */
     padding-top: 20px; /* Ajout de padding pour éviter le collapse */
     overflow: hidden; /* Pour forcer l'application des marges */
 
@@ -79,14 +81,17 @@ a:hover {
 /* Section des images */
 .image-section {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center; /* Espacement entre les images */
     align-items: center;
     margin: 0 auto;
-    max-width: 50%; /* Limite la largeur totale de la section */
+    max-width: 90%;
+    gap: 20px;/* Limite la largeur totale de la section */
 }
 
 .game-image {
-    width: 25%; /* Chaque image prend environ la moitié de l'espace */
+    width: 100%; /* Chaque image prend environ la moitié de l'espace */
+    max-width: 250px; /* Limite la taille sur écrans larges */
     border: 5px solid #C4A000; /* Bordure dorée */
     border-radius: 10px; /* Coins arrondis */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
@@ -95,6 +100,7 @@ a:hover {
 /* Section des colonnes de texte */
 .text-section {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     margin: 40px auto;
@@ -108,12 +114,13 @@ a:hover {
     border: 3px solid #C4A000; /* Bordure dorée */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+    flex: 1; /* Assure des tailles équilibrées */
+    min-width: 280px; /* Empêche les colonnes de devenir trop étroites */
 }
 .text-column a {
     color: #2C3E50;
     display: block; /* Affiche chaque lien comme un bloc */
     margin: 5px 0; /* Ajoute un espacement vertical entre les liens */
-    visibility: visible; /* Force les liens à être visibles */
 }
 
 .text-column a:hover {
@@ -138,25 +145,51 @@ a:hover {
     text-align: center; /* Centrer le contenu textuel */
 }
 
-/* Pour rendre les sections adaptables sur mobile */
-@media (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .text-section {
+        flex-direction: column; /* Colonnes empilées verticalement */
+        gap: 20px;
+    }
+
+    .text-column {
+        width: 100%; /* Colonnes prennent toute la largeur */
+    }
+
     .image-section {
-        flex-direction: lign; /* Images empilées verticalement */
-        align-items: center;
+        justify-content: center;
     }
 
     .game-image {
-        width: 50%; /* Les images occupent la moitié de la page */
+        max-width: 40%; /* Images ajustées pour un meilleur rendu */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-section {
+        flex-direction: column; /* Images empilées verticalement */
+    }
+
+    .game-image {
+        width: 70%; /* Images prennent plus de place */
         margin-bottom: 20px;
     }
 
     .text-section {
-        flex-direction: column; /* Colonnes empilées verticalement */
+        flex-direction: column; /* Colonnes empilées */
     }
 
     .text-column {
-        width: 100%; /* Chaque colonne occupe toute la largeur */
-        margin-bottom: 20px;
+        width: 100%; /* Colonne pleine largeur */
+    }
+
+    .nav {
+        flex-direction: column; /* Navigation empilée */
+        gap: 10px;
+    }
+
+    .nav a {
+        font-size: 18px; /* Taille ajustée */
     }
 }
 
@@ -164,7 +197,6 @@ a:hover {
 .hexagon-button-container {
     display: flex;
     justify-content: center; /* Centre horizontalement */
-    align-items: center;
     margin-top: 20px; /* Espacement entre la colonne centrale et le bouton */
 }
 /* Conteneur du bouton */
@@ -187,11 +219,10 @@ a:hover {
     font-size: 1.2rem;
     font-weight: bold;
     color: #C4A000; /* Texte doré */
-    text-align: center;
-    display: block;
-    width: 100%; /* S'étend sur tout le bouton */
-    height: 100%; /* Prend tout l'espace */
-    line-height: 86.6px; /* Centrer verticalement (basé sur la hauteur du bouton) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 /* Ajout d'un effet hover */

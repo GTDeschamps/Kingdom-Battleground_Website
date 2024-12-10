@@ -9,6 +9,7 @@
     top: 0;
     left: 0;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     align-items: center;
     justify-content: space-between;
@@ -28,6 +29,23 @@
     z-index: 1000;
     /* Toujours visible au-dessus des autres éléments */
 }
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #EAD8A6;
+    font-size: 24px; /* Taille d'origine des polices */
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #C4A000;
+}
 .header h1 {
     margin: 0;
     font-size: 24px;
@@ -36,6 +54,9 @@
 
 .logo img {
     height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* User button */
@@ -193,3 +214,65 @@
     /* Toujours visible au-dessus des autres éléments */
 }
 
+/* Menu déroulant pour les écrans de 768px et moins */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    .burger-menu span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #EAD8A6;
+        margin-bottom: 5px;
+    }
+
+    .burger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .nav-dropdown {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #2C3E50;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-dropdown a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #EAD8A6;
+    }
+
+    .nav-dropdown a:hover {
+        background-color: #C4A000;
+        color: #4E3B31;
+    }
+
+    .burger-menu.active + .nav-dropdown {
+        display: block;
+    }
+}

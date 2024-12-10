@@ -141,3 +141,65 @@ a:hover {
     color: #4E3B31;
     transform: scale(1.05);
 }
+
+/* Responsive Design */
+/* For screens 1024px and smaller */
+@media (max-width: 1024px) {
+    body {
+        flex-direction: column;
+        padding: 50px 10px;
+        text-align: center;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav a {
+        font-size: 20px;
+    }
+
+    .user img {
+        height: 40px;
+    }
+
+    .registration-page {
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .btn-validate {
+        font-size: 1rem;
+    }
+}
+
+/* For screens 768px and smaller */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 5px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav a {
+        font-size: 18px;
+    }
+
+    .registration-page {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .form-group input {
+        font-size: 0.9rem;
+    }
+
+    .btn-validate {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
