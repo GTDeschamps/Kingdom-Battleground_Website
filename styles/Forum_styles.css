@@ -11,7 +11,7 @@ body {
 
 a {
     text-decoration: underline;
-    color: #EAD8A6;
+    color: #2C3E50;
     /* Texte Parchment Beige */
     transition: color 0.3s ease; /* Animation de transition pour la couleur */
 }
@@ -305,4 +305,236 @@ header, footer {
         font-size: 0.9rem;
         padding: 5px;
     }
+}
+
+  /* Search Box styles */
+  .search-box{
+    margin-top: 20px;
+    padding: 40px;
+    display:flex;
+    justify-content: center;
+}
+
+.search-box select{
+    padding: 10px;
+    background-color:#EAD8A6;
+    border-radius: 5px;
+    border-color: #C4A000;
+    color:#000000;
+}
+
+.search-box input{
+    padding: 10px;
+    background-color:#EAD8A6;
+    border-radius: 5px;
+    border-color: #C4A000;
+    color:#000000;
+}
+
+.search-box button{
+    padding: 10px;
+    background-color:#EAD8A6;
+    border-radius: 5px;
+    border-color: #C4A000;
+    color:#000000;
+}
+
+.search-box button:hover{
+    background-color: #355E3B;
+    color: #fff;
+    box-shadow: 1px 2px 3px #000000;
+}
+
+/* search box for smrtphones */
+@media screen and (max-width: 460px){
+    .search-box input, .search-box button, .search-box select{
+        min-width: 300px;
+        margin-top: 5px;
+    }
+
+}
+/* ########################################### */
+/*            posts.html                       */
+/* ########################################### */
+
+/* posts table's head  */
+.table-head{
+    display: flex;
+}
+
+.table-head div{
+    padding: 5px;
+    margin: 2px;
+    background-color: #C4A000;
+    color: #2C3E50;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.table-head .status{
+    flex: 5%;
+}
+
+.table-head .subjects{
+    flex: 70%;
+}
+
+.table-head .replies{
+    flex: 10%;
+}
+
+.table-head .last-reply{
+    flex: 15%;
+}
+
+/* posts table's body  */
+
+.table-row{
+    display: flex;
+}
+
+.table-row .status, .table-row .subjects, .table-row .replies, .table-row .last-reply{
+    padding: 5px;
+    margin: 2px;
+    background-color: #EAD8A6;
+    color: #2C3E50;
+    border-radius: 5px;
+}
+
+.table-row .status{
+    flex: 5%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.table-row .subjects{
+    flex: 70%;
+}
+
+.table-row .replies{
+    flex: 10%;
+}
+
+.table-row .last-reply{
+    flex: 15%;
+}
+
+/* navigation path*/
+.navigate{
+    margin-block: 20px;
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+.navigate a{
+    color: #C4A000;
+}
+
+.navigate a:hover{
+    color:#FF0042;
+    font-weight: bolder;
+}
+
+/* Pagination*/
+
+.pagination{
+    padding: 20px;
+    font-size: 15px;
+}
+
+.pagination a{
+    color: #C4A000;
+    margin-inline: 5px;
+    padding: 5px 10px;
+    border: solid 0.5px #C4A000;
+}
+
+.pagination a:hover{
+    opacity: 0.5;
+}
+
+.note{
+    border-radius: 5px;
+    background-color:#EAD8A6;
+    color:#2C3E50;
+    padding: 20px;
+    display: block;
+}
+
+.note span{
+    font-size: 20px;
+    margin-block: 5px;
+}
+
+
+/* ########################################### */
+/*            detail.html                      */
+/* ########################################### */
+
+.head{
+    display: flex;
+    background-color: #2C2C2C;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.authors{
+    flex: 20%;
+
+}
+
+.content{
+    flex: 80%;
+}
+
+.body{
+    display: flex;
+    background-color: #EAD8A6;
+    color: #2C3E50;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.body .authors .username{
+    font-size: 20px;
+    color: #2C3E50;
+}
+
+.body .authors img{
+    max-width: 50px;
+    max-height: 80px;
+}
+
+.body .content .comment button{
+    border:none;
+    padding:10px;
+    font-weight: bolder;
+    box-shadow: 4px 6px #2C3E50;
+    cursor: pointer;
+    float: right;
+}
+
+/* comment section */
+.comment-area{
+    margin-bottom:50px;
+}
+
+.comment-area textarea{
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-block: 10px;
+}
+
+.comment-area input{
+    float: right;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.comment-area input:hover{
+    border: solid 1px #355E3B;
 }
